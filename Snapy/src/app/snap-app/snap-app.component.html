@@ -1,4 +1,21 @@
-<h2>{{title}}</h2>
-<p>{{description}}</p>
-<p>Created on the {{createdDate}}</p>
-<p>Has {{snaps}} snaps</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="snapy-card">
+<h2>{{snapyApp.title}}</h2>
+<p>{{snapyApp.description}}</p>
+<img [src] = "snapyApp.imageUrl" [alt] = "snapyApp.title">
+<p>Created on the {{snapyApp.createdDate}}</p>
+<p>
+  <button (click) = "onSnap()">Snap</button>
+  {{snapyApp.snaps}} snaps
+</p>
+</div>
+</body>
+</html>
+
